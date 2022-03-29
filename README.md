@@ -19,6 +19,7 @@ Projeto criado seguindo padrão **Patronum**:
 - Login, Autenticação e Autorização (Laravel Middleware)
 - Testes unitários (PHPUnit)
 - Página de documentação padrão  **[GDoc](https://github.com/alciran/GDoc)**
+- **[Deploy](http://listadecontatosalciran.herokuapp.com)** on Heroku: http://listadecontatosalciran.herokuapp.com
 
 ## Ferramentas e softwares utilizados
 
