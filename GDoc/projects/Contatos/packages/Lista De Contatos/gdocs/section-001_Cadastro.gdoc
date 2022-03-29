@@ -1,0 +1,114 @@
+s{
+        @( name=Contato,icon=fas fa-home )
+        t{
+            Esta página é referente a documentação do cadastro de Contato. Nela é apresentado tudo é necessário para cadastrar
+            e gerenciar novos contatos. Não é possível visualizar os contatos cadastrados sem estar logado com um usuário válido.
+            Atualmente existem dois tipos de usuários, que são o do tipo <b>user</b>, com acesso de apenas visualização e leitura,
+            e do tipo <b>admin</b>, com acesso de visualização e leitura, como também com permissão para gerenciar os contatos.
+            A gerência dos contatos cadastrados se dá apenas para usuário com permissão <b>admin</b>.
+        }t
+        ss{
+            @(name=Adicionar Novo Contato)      
+            t{
+                A operação de Adicionar novo contato é apenas para o usuários com permissão do tipo <b>admin</b>. Para adicionar um novo contato, 
+                na página de Lista de Contatos, no botão <b>Adicionar Novo Contato</b>, ou através do atalho de teclado <b>F2</b>,
+                é redirecionado para a página de Cadastro. Para um novo contato são requeridos 3 (três) campos, que são: <b>Nome, E-mail</b>
+                e <b>Telefone</b>. Pode-se incluir telefones nacionais e internacionais. Para cadastrar um telefone internacional, basta
+                selecionar a opção <b>Internacional</b> no formmulário de cadastro.
+            }t
+            t{
+                Por padrão, todos os campos obrigatórios são indicados com um asterisco vermelho (<a style="color: red;">*</a>).
+                Na tabela abaixo é apresentado informações referentes aos compos do cadastro de um novo Contato:
+            }t
+                <table class="table table-sm table-striped table-bordered">                
+                    <tr>
+                        <th class="col-2">Campo</th>
+                        <th class="col-2">Tipo</th>
+                        <th class="col-8">Validações</th>
+                    </tr>                
+                    <tr>
+                        <td>Nome</td>
+                        <td>Texto</td>                    
+                        <td>Obrigatório; Mínino 3 caracteres; máximo 50 caracteres.</td>
+                    <tr>
+                    <tr>
+                        <td>E-mail</td>
+                        <td>Endereço de E-mail</td>                    
+                        <td>Obrigatório; Único; Máximo de 255 caracteres.</td>
+                    <tr>
+                    <tr>
+                        <td>Telefone</td>
+                        <td>Numérico</td>                    
+                        <td>Obrigatório; Único; Pode-se incluir telefones nacionais e internacionais; Mínino 8 caracteres.</td>
+                    <tr>
+                </table>
+            t{
+                <br>Abaixo é apresentado uma imagem do formulário de cadatro de Contato:
+            }t     
+            @img(title=Cadastro de Contato, src=add_contato.png , grid_size=6)
+
+            t{
+                Os campos obrigatórios são validados e não é possível cadastrar sem preenchimento.
+                Também os campos de <b>E-mail</b> e <b>Telefone</b> são únicos para cada cadastro, ou seja, não pode-se incluir
+                um mesmo e-mail ou mesmo telefone para mais de um cadastro. Exemplos dessas validações podem ser verificados
+                nas imagens abaixo:
+            }t
+            @img(title=Validação de Campos em Branco, src=add_contato_validacao.png , grid_size=6)
+            @img(title=Validações de Campos Únicos, src=add_contato_unique_validacao.png , grid_size=6)
+
+            t{
+                Após preencher corretamento os campos do formulário, para cadastrar o novo contato basta clicar no botão <b>Salvar</b>,
+                ou utilizar a tecla de atalho <b>Enter</b>. Para cancelar a operação e voltar a página de <i>Lista de Contatos Cadastrados</i>,
+                basta clicar no botão <b>Cancelar</b>, ou utilizar a tecla de atalho <b>F4</b>.
+            }t            
+                        
+        }ss
+
+        ss{
+            @(name=Editar Contato)
+            t{
+                Na página de <i>Lista de Contatos Cadastrados</i>, para editar, na linha da tabela referente ao Contato,
+                na coluna <b>Ações</b>, basta cliclar no botão de </i>Editar Cadastro</i>, com ícone:
+                <i class="fas fa-pencil-alt" style="color: black;"></i>. Esta opção irá abrir o formulário de cadastro trazendo as
+                informações do Contato escolhido, bastando apenas realizar as devidas edições e cliclar em
+                <b>Salvar</b> para manter as alterações, ou cliclar em <b>Cancelar</b> para sair do cadastro sem salvar, e retornar
+                a tela de <i>Lista de Contatos Cadastrados</i>.<br>                
+            }t
+            cl{
+                @(name=Validações,icon=fa fa-info,type=info)
+                O formulário de edição de um Contato cadastrado segue <b><u>as mesmas validações</u></b>
+                do formulário para <a href="#subsection-1">Adicionar um novo Contato</a>.
+            }cl
+        }ss
+
+        ss{
+            @(name=Remover Contato)
+            t{
+                Na <i>Lista de Contatos Cadastrados</i>, para remover, na linha da tabela referente ao Contato,
+                na coluna <b>Ações</b>, 
+                basta cliclar no botão de </i>Remover Cadastro</i> com o ícone: <i class="fas fa-trash" style="color: black;"></i>.
+                Esta opção irá abrir uma modal pedindo a confirmação. Ao clicar em <b>Remover</b>, o Contato será removido. 
+                Caso queira cancelar a operação, basta
+                clicar no botão <b>Cancelar</b> para fechar a modal sem remover o e voltar a lista de Checkouts cadastrados.
+            }t
+            cl{
+                @(name=Cuidado!,icon=fa fa-exclamation-circle,type=danger)
+                Ao confirmar e remover um Contato, esse operação se tornar <b><u>irreversível</u></b>, e o cadastro removido não poderá 
+                mais ser recuperado!
+            }cl
+        }ss
+
+        ss{
+            @(name=Exportar Contatos, bdg_value=Novo, bdg_type=success)
+            t{
+                Na página de <i>Lista de Contatos</i> existe opções para impressão e exportação dos contatos cadastrados.
+                Essas opções estão disponíveis atualmente para os dois tipos de usuários existentes, do tipo <b>user</b> 
+                e do tipo <b>admin</b>. Além da opção de <b>Imprimir</b>, existe a opção de exportar para <b>PDF</b>, <b>Excel</b> 
+                e <b>CSV</b>(Valores separados por vírgula). Essas opções podem ser acessadas na parte superior da tabela dos 
+                Contatos cadastrados, como pode ser visualizado na imagem abaixo, indicado pela flecha em vermelho.
+            }t
+            @img(src=exportar_contatos.png, grid_size=6)
+        }ss
+    }s    
+ 
+ 

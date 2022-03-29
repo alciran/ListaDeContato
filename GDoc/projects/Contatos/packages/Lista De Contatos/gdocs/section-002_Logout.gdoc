@@ -1,0 +1,12 @@
+s{
+    @(name=Logout, icon=fas fa-power-off)
+    t{
+        Para realizar logout e sair da Lista de Contatos Cadastrados, deve-se clicar em cima do nome de usuário
+        atualmente logado, no canto superior direito da tela, no menu superior, como apresentado na imagem abaixo.
+        Nessa etapa é apresentado a opção <b>Log Out</b>, que ao clicar, o usuário é desconectado e redirecionado
+        para a página de Login.
+    }t
+    @img(src=logout.png, grid_size=6)
+}s
+ 
+ 

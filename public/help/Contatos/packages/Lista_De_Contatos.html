@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista De Contatos</title>    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="GDoc - Package de documentação: Lista De Contatos">
+    <meta name="author" content="Alciran Franco">    
+    <link rel="shortcut icon" href="../../dist/img/favicon.ico"> 
+    
+    <!-- Google Font -->	
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome JS-->
+    <script defer src="../../dist/js/fontawesome_all.min.js"></script>
+
+    <!-- Color Theme Style -->
+    <link id="color-theme-style" rel="stylesheet" href="../../dist/css/themeColors/theme-green.css">
+    <!-- Global Style -->
+    <link id="color-theme-style" rel="stylesheet" href="../../dist/css/style.css">   
+
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="../../dist/plugins/prism/prism.css">
+    <link rel="stylesheet" href="../../dist/plugins/elegant_font/css/style.css">
+    <link rel="stylesheet" href="../../dist/plugins/simplelightbox/simple-lightbox.min.css"> <!--geleria de imagens-->
+    <link rel="stylesheet" href="../../dist/plugins/lightbox/dist/ekko-lightbox.css"> <!--geleria de imagens-->
+
+</head>  
+<body>
+<header class="header fixed-top header-resp">
+    <div class="branding docs-branding">
+        <div class="row justify-content-end">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">	
+                    <!-- Colorir item selecinado -->		
+                    <button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none" type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <!-- fim colorir item selecinado -->       
+                </div><!--//docs-logo-wrapper-->
+                <div class="components-header">
+                    <div class="logo-icon"><img class="logo-icon-img" src="../../dist/img/package50.png"  width="35px" height="35px" alt="logo"></div>
+                    <a href="#section-1"><span class="page-title" title="Ir para página do package: Lista De Contatos">&nbsp;&nbsp; Lista De Contatos </span></a>
+                    <a href="../index.html"><span class="page-title" title="Ir para página do projeto: Contatos">&nbsp;&nbsp;<green><u>[Contatos]</u></green></span></a> 
+                </div>
+            </div><!--//container-->               
+        </div> 
+    </div><!--//branding-->
+</header><!--//header--> 
+  <div id="docs-sidebar" class="docs-sidebar">		    
+    <nav id="docs-nav" class="docs-nav navbar">
+      <ul class="section-items list-unstyled nav flex-column pb-3">
+        <!--sidebar-->
+<li class='nav-item section-title'><a class='nav-link scrollto active' href='#section-1'> <span class='theme-icon-holder me-2'><i class='fas fa-home '></i></span>Contato</a></li>
+<li class='nav-item'><a class='nav-link scrollto subsession' href='#subsection-1'>Adicionar Novo Contato      </a></li>
+<li class='nav-item'><a class='nav-link scrollto subsession' href='#subsection-2'>Editar Contato</a></li>
+<li class='nav-item'><a class='nav-link scrollto subsession' href='#subsection-3'>Remover Contato</a></li>
+<li class='nav-item'><a class='nav-link scrollto subsession' href='#subsection-4'>Exportar Contatos</a></li>
+<li class='nav-item section-title'><a class='nav-link scrollto active' href='#section-2'> <span class='theme-icon-holder me-2'><i class='fas fa-power-off'></i></span>Logout</a></li>     
+      </ul>
+    </nav><!--//docs-nav-->
+  </div><!--//docs-sidebar--> 
+<div class="docs-content">
+<div class="container">
+    <!-- Inicio da section-->
+    <article class="docs-article" id="section-1">
+        <h3 class="docs-heading with-badge">Contato  <span class='docs-time'> Versão:  <strong>1.0.0</strong> Autor:  <a title='Developer  '><strong>Alciran Franco</strong></a> Última Atualização:  <strong>28/03/2022 01:08</strong></span></h3>         
+        <section class="docs-intro">        
+<p class='text-default'>
+Esta página é referente a documentação do cadastro de Contato. Nela é apresentado tudo é necessário para cadastrar
+e gerenciar novos contatos. Não é possível visualizar os contatos cadastrados sem estar logado com um usuário válido.
+Atualmente existem dois tipos de usuários, que são o do tipo <b>user</b>, com acesso de apenas visualização e leitura,
+e do tipo <b>admin</b>, com acesso de visualização e leitura, como também com permissão para gerenciar os contatos.
+A gerência dos contatos cadastrados se dá apenas para usuário com permissão <b>admin</b>.
+</p><br>
+          <section class="docs-section" id="subsection-1">
+            <h4 class="section-heading with-badge">Adicionar Novo Contato       </h4>  
+<p class='text-default'>
+A operação de Adicionar novo contato é apenas para o usuários com permissão do tipo <b>admin</b>. Para adicionar um novo contato,
+na página de Lista de Contatos, no botão <b>Adicionar Novo Contato</b>, ou através do atalho de teclado <b>F2</b>,
+é redirecionado para a página de Cadastro. Para um novo contato são requeridos 3 (três) campos, que são: <b>Nome, E-mail</b>
+e <b>Telefone</b>. Pode-se incluir telefones nacionais e internacionais. Para cadastrar um telefone internacional, basta
+selecionar a opção <b>Internacional</b> no formmulário de cadastro.
+</p><br>
+<p class='text-default'>
+Por padrão, todos os campos obrigatórios são indicados com um asterisco vermelho (<a style="color: red;">*</a>).
+Na tabela abaixo é apresentado informações referentes aos compos do cadastro de um novo Contato:
+</p><br>
+<table class="table table-sm table-striped table-bordered">
+<tr>
+<th class="col-2">Campo</th>
+<th class="col-2">Tipo</th>
+<th class="col-8">Validações</th>
+</tr>
+<tr>
+<td>Nome</td>
+<td>Texto</td>
+<td>Obrigatório; Mínino 3 caracteres; máximo 50 caracteres.</td>
+<tr>
+<tr>
+<td>E-mail</td>
+<td>Endereço de E-mail</td>
+<td>Obrigatório; Único; Máximo de 255 caracteres.</td>
+<tr>
+<tr>
+<td>Telefone</td>
+<td>Numérico</td>
+<td>Obrigatório; Único; Pode-se incluir telefones nacionais e internacionais; Mínino 8 caracteres.</td>
+<tr>
+</table>
+<p class='text-default'>
+<br>Abaixo é apresentado uma imagem do formulário de cadatro de Contato:
+</p><br>
+<div class="row"><h4>Cadastro de Contato</h4><img class="col-md-6 gdoc-image" src="../../dist/files/add_contato.png " alt="" /></div><br>
+<p class='text-default'>
+Os campos obrigatórios são validados e não é possível cadastrar sem preenchimento.
+Também os campos de <b>E-mail</b> e <b>Telefone</b> são únicos para cada cadastro, ou seja, não pode-se incluir
+um mesmo e-mail ou mesmo telefone para mais de um cadastro. Exemplos dessas validações podem ser verificados
+nas imagens abaixo:
+</p><br>
+<div class="row"><h4>Validação de Campos em Branco</h4><img class="col-md-6 gdoc-image" src="../../dist/files/add_contato_validacao.png " alt="" /></div><br>
+<div class="row"><h4>Validações de Campos Únicos</h4><img class="col-md-6 gdoc-image" src="../../dist/files/add_contato_unique_validacao.png " alt="" /></div><br>
+<p class='text-default'>
+Após preencher corretamento os campos do formulário, para cadastrar o novo contato basta clicar no botão <b>Salvar</b>,
+ou utilizar a tecla de atalho <b>Enter</b>. Para cancelar a operação e voltar a página de <i>Lista de Contatos Cadastrados</i>,
+basta clicar no botão <b>Cancelar</b>, ou utilizar a tecla de atalho <b>F4</b>.
+</p><br>
+          </section><!--//section--> 
+          <section class="docs-section" id="subsection-2">
+            <h4 class="section-heading with-badge">Editar Contato </h4>  
+<p class='text-default'>
+Na página de <i>Lista de Contatos Cadastrados</i>, para editar, na linha da tabela referente ao Contato,
+na coluna <b>Ações</b>, basta cliclar no botão de </i>Editar Cadastro</i>, com ícone:
+<i class="fas fa-pencil-alt" style="color: black;"></i>. Esta opção irá abrir o formulário de cadastro trazendo as
+informações do Contato escolhido, bastando apenas realizar as devidas edições e cliclar em
+<b>Salvar</b> para manter as alterações, ou cliclar em <b>Cancelar</b> para sair do cadastro sem salvar, e retornar
+a tela de <i>Lista de Contatos Cadastrados</i>.<br>
+</p><br>
+<div class="callout-block callout-info">
+    <div class="icon-holder">
+        <i class="fa fa-info"></i>
+    </div><!--//icon-holder-->
+    <div class="content">
+        <h4 class="callout-title">Validações</h4>
+O formulário de edição de um Contato cadastrado segue <b><u>as mesmas validações</u></b>
+do formulário para <a href="#subsection-1">Adicionar um novo Contato</a>.
+    </div><!--//content-->
+</div><!--//callout-block-->     
+          </section><!--//section--> 
+          <section class="docs-section" id="subsection-3">
+            <h4 class="section-heading with-badge">Remover Contato </h4>  
+<p class='text-default'>
+Na <i>Lista de Contatos Cadastrados</i>, para remover, na linha da tabela referente ao Contato,
+na coluna <b>Ações</b>,
+basta cliclar no botão de </i>Remover Cadastro</i> com o ícone: <i class="fas fa-trash" style="color: black;"></i>.
+Esta opção irá abrir uma modal pedindo a confirmação. Ao clicar em <b>Remover</b>, o Contato será removido.
+Caso queira cancelar a operação, basta
+clicar no botão <b>Cancelar</b> para fechar a modal sem remover o e voltar a lista de Checkouts cadastrados.
+</p><br>
+<div class="callout-block callout-danger">
+    <div class="icon-holder">
+        <i class="fa fa-exclamation-circle"></i>
+    </div><!--//icon-holder-->
+    <div class="content">
+        <h4 class="callout-title">Cuidado!</h4>
+Ao confirmar e remover um Contato, esse operação se tornar <b><u>irreversível</u></b>, e o cadastro removido não poderá
+mais ser recuperado!
+    </div><!--//content-->
+</div><!--//callout-block-->     
+          </section><!--//section--> 
+          <section class="docs-section" id="subsection-4">
+            <h4 class="section-heading with-badge">Exportar Contatos <span class='badge badge-success'>Novo</span></h4>  
+<p class='text-default'>
+Na página de <i>Lista de Contatos</i> existe opções para impressão e exportação dos contatos cadastrados.
+Essas opções estão disponíveis atualmente para os dois tipos de usuários existentes, do tipo <b>user</b>
+e do tipo <b>admin</b>. Além da opção de <b>Imprimir</b>, existe a opção de exportar para <b>PDF</b>, <b>Excel</b>
+e <b>CSV</b>(Valores separados por vírgula). Essas opções podem ser acessadas na parte superior da tabela dos
+Contatos cadastrados, como pode ser visualizado na imagem abaixo, indicado pela flecha em vermelho.
+</p><br>
+<div class="row"><h4></h4><img class="col-md-6 gdoc-image" src="../../dist/files/exportar_contatos.png" alt="" /></div><br>
+          </section><!--//section--> 
+        </section><!--//docs-intro-->
+    </article><!--//docs-article-->
+    <!--Fim da section-->
+    <!-- Inicio da section-->
+    <article class="docs-article" id="section-2">
+        <h3 class="docs-heading with-badge">Logout  </h3>         
+        <section class="docs-intro">        
+<p class='text-default'>
+Para realizar logout e sair da Lista de Contatos Cadastrados, deve-se clicar em cima do nome de usuário
+atualmente logado, no canto superior direito da tela, no menu superior, como apresentado na imagem abaixo.
+Nessa etapa é apresentado a opção <b>Log Out</b>, que ao clicar, o usuário é desconectado e redirecionado
+para a página de Login.
+</p><br>
+<div class="row"><h4></h4><img class="col-md-6 gdoc-image" src="../../dist/files/logout.png" alt="" /></div><br>
+        </section><!--//docs-intro-->
+    </article><!--//docs-article-->
+    <!--Fim da section-->
+<footer class="footer text-center">
+    <div class="docs-content">   
+    <div class="container">
+        <small class="copyright">
+<a href="https://github.com/alciran/gdoc" target='_blank'>GDoc</a>
+- Ferramenta para páginas de Documentação em HTML <i class="fas fa-laptop-code"></i>
+      </small> 
+     </div><!--//container-->
+    </div>
+</footer><!--//footer-->
+</div>
+</div>
+<!-- Page Specific JS -->
+  <!-- Javascript -->          
+  <script src="../../dist/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+  <script src="../../dist/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+  <script src="../../dist/js/docs.js"></script>
+
+
+  <!-- Main Javascript -->          
+  <script type="text/javascript" src="../../dist/plugins/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="../../dist/plugins/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../../dist/plugins/prism/prism.js"></script>
+  <script type="text/javascript" src="../../dist/plugins/lightbox/dist/ekko-lightbox.min.js"></script>      
+  <script type="text/javascript" src="../../dist/plugins/stickyfill/dist/stickyfill.min.js"></script>                                                               
+  <script type="text/javascript" src="../../dist/js/main.js"></script></body>
+</html>
